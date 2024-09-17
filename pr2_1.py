@@ -83,6 +83,18 @@ def fourth():
         current_year += 1
     print(f'население города превысит 1.5млн человек в {current_year} году\n')
 
+    
+    while True:
+        answer = input("хотите продолжить? (да/нет) ")
+        match answer.lower():
+            case "да" | "lf" | "yes":
+                main()
+                break
+            case "нет" | "ytn" | "no":
+                print('ок')
+                break
+            case _:
+                print("ошибка: введите 'да' или 'нет'")
 
 def fifth():
     
