@@ -4,7 +4,7 @@ class task_1:
         # инициализация класса soda с добавкой
         self.suppl = suppl  # сохраняем добавку в атрибуте класса
 
-    def show_my_drink(self):
+    def drink(self):
         # метод для отображения типа газировки
         if self.suppl:  # проверка добавки
             print(f"газировка и {self.suppl}")
@@ -12,5 +12,5 @@ class task_1:
             print("обычная газировка")
 
 soda1 = task_1(input())
-soda1.show_my_drink()
+soda1.drink()
 

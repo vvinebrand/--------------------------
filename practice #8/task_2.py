@@ -12,7 +12,7 @@ class task_2:
         else:
             self.a = self.b = self.c = None  # сбрасываем значения, если не числа
 
-    def is_triangle(self):
+    def triangle(self):
         # метод для проверки возможности построения треугольника
         if self.a is None:
             # значение сторон сброшено из-за неверного ввода
@@ -27,4 +27,4 @@ class task_2:
             return "нельзя построить треугольник"
 
 triangle_checker1 = task_2(int(input().split(' ',',')))
-print(triangle_checker1.is_triangle())
+print(triangle_checker1.triangle())
