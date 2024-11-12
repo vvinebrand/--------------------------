@@ -11,9 +11,9 @@ def first():
 def second():
     filename = input("введите имя существующего файла (с расширением, например, 'example.txt'): ")
     try:
-        with open(filename, 'r', encoding='utf-8') as infile:
+        with open(filename, 'r', encoding='utf-8') as infile: #r - открываем файл для чтения
             lines = infile.readlines()
-        with open(filename, 'w', encoding='utf-8') as outfile:
+        with open(filename, 'w', encoding='utf-8') as outfile: #w - открываем файл для записи
             for index, line in enumerate(lines, start=1):
                 clean = line.rstrip()
                 outfile.write(f"{index}. {clean}\n")
@@ -28,19 +28,19 @@ def third():
         with open(filename, 'r', encoding='utf-8') as infile:
             lines = infile.readlines()
         counter = 1
-        for i in range(0, len(lines), lines_per_file):
-            chunk = lines[i:i + lines_per_file]
-            outfilename = f'{counter}.txt'
+        for i in range(0, len(lines), lines_per_file): #создание последовательности индексов с 0 до len(lines) с шагом lines_per_file
+            chunk = lines[i:i + lines_per_file] #создаем подсписок chunck, содержащий lpf строк, начиная с i при помощи среза
+            outfilename = f'{counter}.txt' #имя файла для вывода
             counter += 1
-            with open(outfilename, 'w', encoding='utf-8') as outfile:
-                outfile.writelines(chunk)
+            with open(outfilename, 'w', encoding='utf-8') as outfile: #открываем файл в режиме записи (будет закрыт автоматически)
+                outfile.writelines(chunk) #записываем все строки из chunk в файл
     except FileNotFoundError:
         print(f"файл {filename} не найден")
     main()
 
 def fourth():
     infiles = input("введите имена файлов для объединения, разделенные запятыми (с расширением, например, 'example.txt'): ").split(',')
-    infiles = [file.strip() for file in infiles]
+    infiles = [file.strip() for file in infiles] #file.strip удаляет все пробелы или другие символы. итерируемся по существующему списку
     outfilename = 'combined.txt'
     try:
         with open(outfilename, 'w', encoding='utf-8') as outfile:
@@ -48,7 +48,7 @@ def fourth():
                 try:
                     with open(filename, 'r', encoding='utf-8') as infile:
                         content = infile.read()
-                        outfile.write(content + '\n')
+                        outfile.write(content)
                 except FileNotFoundError:
                     print(f"файл {filename} не найден")
                 except Exception as e:
