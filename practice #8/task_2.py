@@ -17,7 +17,6 @@ class task_2:
         if self.a is None:
             # значение сторон сброшено из-за неверного ввода
             if isinstance(self.a, (int, float)) or isinstance(self.b, (int, float)) or isinstance(self.c, (int, float)):
-                # если хотя бы одно значение было числом
                 return "отрицательные числа нельзя"
             else:
                 return "нужны только числа" 
@@ -25,7 +24,7 @@ class task_2:
         if self.a + self.b > self.c and self.a + self.c > self.b and self.b + self.c > self.a:
             return "можно построить треугольник"
         else:
-            return "нельзя посмотрить треугольник"
+            return "нельзя построить треугольник"
 
 triangle_checker1 = task_2(int(input().split(' ',',')))
 print(triangle_checker1.is_triangle())

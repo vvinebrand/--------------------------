@@ -30,6 +30,6 @@ print(nikolai1.name)
 print(nikolai.age)
 
 try:
-    nikolai.patronymic = "Маратович"
+    nikolai.parentage = "Маратович"
 except AttributeError as e:
     print(e)
