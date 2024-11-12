@@ -23,7 +23,7 @@ class task_4:
         super().__setattr__(key, value)
 
 nikolai = task_4("Леон", 25)
-nikolai1 = task_4("Николай", 33)
+nikolai1 = task_4("николай", 33)
 
 print(nikolai.name)
 print(nikolai1.name)
