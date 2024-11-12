@@ -22,11 +22,11 @@ class KgToPounds:
 
 
 # Пример использования:
-kg_to_pounds = KgToPounds(int(input()))  # создаем объект с 10 килограммами
-print(kg_to_pounds.to_pounds())  # выводит: 22.05
+kg_to_pounds = KgToPounds(int(input()))
+print(kg_to_pounds.to_pounds())
 
-print(kg_to_pounds.kg)  # выводим текущее значение килограммов: 10
+print(kg_to_pounds.kg)
 
-kg_to_pounds.kg = int(input())  # изменяем значение на 15 килограммов
-print(kg_to_pounds.kg)  # выводим текущее значение килограммов: 15
-print(kg_to_pounds.to_pounds())  # выводит: 33.075
+kg_to_pounds.kg = int(input())
+print(kg_to_pounds.kg)
+print(kg_to_pounds.to_pounds())
