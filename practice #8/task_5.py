@@ -1,4 +1,4 @@
-class RealString:
+class task_5:
     # инициализация объекта класса с заданной строкой
     def __init__(self, value):
         self.value = value  # сохраняем переданное значение как атрибут объекта
@@ -9,7 +9,7 @@ class RealString:
 
     # метод для сравнения строк по количеству символов
     def __lt__(self, other):
-        if isinstance(other, RealString):  # проверяем, является ли другой объект экземпляром RealString
+        if isinstance(other, task_5):  # проверяем, является ли другой объект экземпляром RealString
             return len(self) < len(other)  # сравниваем длину текущей строки с длиной другой строки
         elif isinstance(other, str):  # проверяем, является ли другой объект обычной строкой
             return len(self) < len(other)  # сравниваем длину текущей строки с длиной обычной строки
@@ -20,8 +20,8 @@ class RealString:
     def __str__(self):
         return self.value  # возвращаем значение строки для удобного отображения
 
-real_str1 = RealString("Apple")
-real_str2 = RealString("Яблоко")
+real_str1 = task_5("Apple")
+real_str2 = task_5("Яблоко")
 
 print(real_str1 < real_str2)
 

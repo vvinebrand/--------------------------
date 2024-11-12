@@ -1,6 +1,5 @@
-class TriangleChecker:
-    def __init__(self, a, b, c):
-        # инициализация класса TriangleChecker с тремя сторонами
+class task_2:
+    def __init__(self, a, b, c): 
         if isinstance(a, (int, float)) and isinstance(b, (int, float)) and isinstance(c, (int, float)):
             # проверка, являются ли все стороны числами
             if a > 0 and b > 0 and c > 0:
@@ -16,17 +15,17 @@ class TriangleChecker:
     def is_triangle(self):
         # метод для проверки возможности построения треугольника
         if self.a is None:
-            # если значение сторон сброшено из-за неверного ввода
+            # значение сторон сброшено из-за неверного ввода
             if isinstance(self.a, (int, float)) or isinstance(self.b, (int, float)) or isinstance(self.c, (int, float)):
                 # если хотя бы одно значение было числом
-                return "С отрицательными числами ничего не выйдет!"  # возвращаем сообщение о отрицательных числах
+                return "отрицательные числа нельзя"
             else:
-                return "Нужно вводить только числа!"  # возвращаем сообщение о неверном типе данных
+                return "нужны только числа" 
         # проверка неравенства треугольника
         if self.a + self.b > self.c and self.a + self.c > self.b and self.b + self.c > self.a:
-            return "Ура, можно построить треугольник!"  # возвращаем сообщение о возможности построения треугольника
+            return "можно построить треугольник"
         else:
-            return "Жаль, но из этого треугольник не сделать."  # возвращаем сообщение о невозможности построения
+            return "нельзя посмотрить треугольник"
 
-triangle_checker1 = TriangleChecker(int(input().split(' ',',')))  # создаем объект с тремя положительными числами
-print(triangle_checker1.is_triangle())  # выводит: Ура, можно построить треугольник!
+triangle_checker1 = task_2(int(input().split(' ',',')))
+print(triangle_checker1.is_triangle())
