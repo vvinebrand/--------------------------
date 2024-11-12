@@ -9,7 +9,7 @@ class task_5:
 
     # метод для сравнения строк по количеству символов
     def __lt__(self, other):
-        if isinstance(other, task_5):  # проверяем, является ли другой объект экземпляром RealString
+        if isinstance(other, task_5):  # проверяем, является ли другой объект экземпляром task_5
             return len(self) < len(other)  # сравниваем длину текущей строки с длиной другой строки
         elif isinstance(other, str):  # проверяем, является ли другой объект обычной строкой
             return len(self) < len(other)  # сравниваем длину текущей строки с длиной обычной строки
